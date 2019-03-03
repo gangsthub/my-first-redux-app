@@ -1,19 +1,20 @@
 import { AnyAction } from 'redux';
 
 import {
+  ResponseAction,
   REQUEST_STANDINGS,
   RECEIVED_STANDINGS
 } from './actions'
 
-import { ApiResponse, ResponseAction } from './actions'
+import { ApiResponse } from 'src/models/ApiResponse';
 
-export interface IState {
+export interface StandingsStore {
   isFetching?: boolean,
   results?: ApiResponse
 }
 
 function standings(
-  state: IState,
+  state: StandingsStore,
   action: any
 ) {
   switch (action.type) {
@@ -31,7 +32,7 @@ function standings(
   }
 }
 
-function standingsReducer(state: IState, action: ResponseAction|AnyAction): IState {
+function standingsReducer(state: StandingsStore, action: ResponseAction|AnyAction): StandingsStore {
   switch (action.type) {
     case REQUEST_STANDINGS:
     case RECEIVED_STANDINGS:

@@ -3,9 +3,10 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { AxiosResponse } from 'axios';
 
 import footBallApi from '../api';
-import { IState } from './reducers';
+import { StandingsStore } from './reducers';
 
-export type ApiResponse = any;
+import { ApiResponse } from 'src/models/ApiResponse';
+
 export interface ResponseAction extends AnyAction { response: ApiResponse }
 
 
@@ -24,8 +25,8 @@ export function receivedStandings(response: any): ResponseAction {
   }
 }
 
-export function fetchStandings(): ThunkAction<Promise<void>, IState, undefined, AnyAction | ResponseAction> {
-  return (dispatch: ThunkDispatch<IState, undefined, AnyAction | ResponseAction>) => {
+export function fetchStandings(): ThunkAction<Promise<void>, StandingsStore, undefined, AnyAction | ResponseAction> {
+  return (dispatch: ThunkDispatch<StandingsStore, undefined, AnyAction | ResponseAction>) => {
     dispatch(requestStandings())
     return footBallApi.get('/competitions/PD/standings')
       .then(
