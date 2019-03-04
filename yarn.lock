@@ -847,6 +847,13 @@
     csstype "^2.0.0"
     indefinite-observable "^1.0.1"
 
+"@types/material-ui@^0.21.6":
+  version "0.21.6"
+  resolved "https://registry.yarnpkg.com/@types/material-ui/-/material-ui-0.21.6.tgz#047377ac49e623c2dafe47ccdf8713dcb02bd793"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-addons-linked-state-mixin" "*"
+
 "@types/node@*":
   version "10.12.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.24.tgz#b13564af612a22a20b5d95ca40f1bffb3af315cf"
@@ -862,6 +869,12 @@
 "@types/q@^1.5.1":
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.1.tgz#48fd98c1561fe718b61733daed46ff115b496e18"
+
+"@types/react-addons-linked-state-mixin@*":
+  version "0.14.20"
+  resolved "https://registry.yarnpkg.com/@types/react-addons-linked-state-mixin/-/react-addons-linked-state-mixin-0.14.20.tgz#5f0cd884ace049d538982a3b254f4807b9395eb6"
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-dom@16.8.2":
   version "16.8.2"

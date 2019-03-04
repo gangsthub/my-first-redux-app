@@ -9,7 +9,7 @@ const store = createStore(
   applyMiddleware(thunkMiddleware as (ThunkMiddleware<StandingsStore, ResponseAction | AnyAction>)),
 )
 
-store.dispatch(fetchStandings()).then(() => console.log(store.getState()))
+store.dispatch(fetchStandings())/* .then(() => console.log(store.getState()) )*/
 
 
 export default store;

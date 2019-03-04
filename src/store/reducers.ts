@@ -15,7 +15,7 @@ export interface StandingsStore {
 
 function standings(
   state: StandingsStore,
-  action: any
+  action: AnyAction|ResponseAction
 ) {
   switch (action.type) {
     case REQUEST_STANDINGS:
@@ -25,7 +25,7 @@ function standings(
     case RECEIVED_STANDINGS:
       return Object.assign({}, state, {
         isFetching: false,
-        response: action.response,
+        results: action.response,
       })
     default:
       return state

@@ -9,7 +9,6 @@ import { ApiResponse } from 'src/models/ApiResponse';
 
 export interface ResponseAction extends AnyAction { response: ApiResponse }
 
-
 export const REQUEST_STANDINGS = 'REQUEST_STANDINGS'
 export function requestStandings(): AnyAction {
   return {
